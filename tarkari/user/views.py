@@ -16,11 +16,11 @@ def register(request):
             password=form.cleaned_data.get('password')
             user=authenticate(username=username,password=password)
             login(request,user)
-            retrun redirect('auth_login')
+            return redirect('auth_login')
         else:
             message.error(request,"Registration Failed.")
     else:
-        from=RegisterForm()
+        form = RegisterForm()
     return render(request,'register.html',{'form':form})
 
 
