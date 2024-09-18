@@ -2,8 +2,8 @@ from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
-from django.contrib import message
-from django.contrib import RegisterForm
+from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
 
 
 
@@ -18,7 +18,7 @@ def register(request):
             login(request,user)
             return redirect('auth_login')
         else:
-            message.error(request,"Registration Failed.")
+            messages.error(request,"Registration Failed.")
     else:
         form = RegisterForm()
     return render(request,'register.html',{'form':form})
@@ -35,9 +35,9 @@ def user_login(request):
                 login(request, user)
                 return redirect('home')
             else:
-                message.error(request, "Invalid username or password.")
+                messages.error(request, "Invalid username or password.")
         else:
-            message.error(request, "Invalid username or password.")
+            messages.error(request, "Invalid username or password.")
     else:
         form = AuthenticationForm(request)
     return render(request,'login.html',{'form':form})
