@@ -3,7 +3,7 @@ from .models import product
 
 
 def index(request):
-    product_objects=product.objects.all()
-    return render(request)
+    product_objects=Product.objects.all()
+    return render(request,'index.html')
 
 # Create your views here.
