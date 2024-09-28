@@ -9,6 +9,6 @@ def product_views(request):
         if form.is_valid():
             form.save()
         
-    return render(request,'products.html')
-    product_objects=Product.objects.all()
+    return render(request,'admin/add-product.html')
+   
 
