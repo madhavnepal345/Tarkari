@@ -26,5 +26,5 @@ urlpatterns = [
     path('',index, name='home'),
     path('about/',include('userside.urls')),
     path('products/',include('product.urls')),
-    # path('',include('user.urls')),
+    path('admin/',include('myadmin.urls')),
 ]

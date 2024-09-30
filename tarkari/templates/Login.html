@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}    <!-- Navbar End -->
-
-
+{% block content %}
+ 
     <!-- Page Header Start -->
     <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
@@ -18,24 +17,24 @@
     </div>
     <!-- Page Header End -->
 
-
-         <!-- Login page Start -->
-         <form class="form">
-            <h3 class="text-center">Login Form</h3>
-            <div class="mb-4 ">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary ">Login</button>
-          </form>
+    <!-- Login page Start -->
+    <form class="form" method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <h3 class="text-center">Login Form</h3>
+        <div class="mb-4">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" id="email" required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="password" required>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
     <!-- Login page End -->
-{% block content %}
+{% endblock %}
