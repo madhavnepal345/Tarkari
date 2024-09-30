@@ -26,5 +26,6 @@ urlpatterns = [
     path('',index, name='home'),
     path('about/',include('userside.urls')),
     path('products/',include('product.urls')),
-    path('admin/',include('myadmin.urls')),
+    path('admin_side/',include('myadmin.urls')),
+    path('login/',include('loginsystem.urls')),
 ]

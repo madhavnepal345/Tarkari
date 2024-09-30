@@ -2,6 +2,8 @@ from django.shortcuts import render
 from product.models import Product
 
 
+
+
 def about(request):
     return render (request,'about.html')
 
