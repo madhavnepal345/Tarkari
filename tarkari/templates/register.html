@@ -10,40 +10,40 @@
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a class="text-body" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-body" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-dark active" aria-current="page">register</li>
+                    <li class="breadcrumb-item text-dark active" aria-current="page">Register</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
 
-
-         <!-- Login page Start -->
-         <form class="form">
-            <h3 class="text-center">Register Form</h3>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="exampleInputPassword1">
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="exampleInputPassword1">
-              </div>
-            <div class="mb-4 ">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary ">Login</button>
-          </form>
-    <!-- Login page End -->
+    <!-- Register page Start -->
+    <form class="form" method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        <h3 class="text-center">Register Form</h3>
+        <div class="mb-3">
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" name="first_name" class="form-control" id="first_name" required>
+        </div>
+        <div class="mb-3">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" name="last_name" class="form-control" id="last_name" required>
+        </div>
+        <div class="mb-4">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" id="email" required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="password" required>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <!-- Register page End -->
 
 {% endblock %}
