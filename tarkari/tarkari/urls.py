@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index, name='home'),
     path('about/',include('userside.urls')),
-    path('products/',include('product.urls')),
+    # path('products/',include('product.urls')),
     path('admin_side/',include('myadmin.urls')),
     path('login/',include('loginsystem.urls')),
 ]
