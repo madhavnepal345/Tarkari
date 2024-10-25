@@ -43,7 +43,7 @@ def register_view(request):
             )
             # Log the user in and redirect to the homepage
             login(request, user)
-            return redirect('login')  # Replace 'home' with your homepage URL name
+            return redirect('home')  # Replace 'home' with your homepage URL name
     
     return render(request, 'register.html')
 

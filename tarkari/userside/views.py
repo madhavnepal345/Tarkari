@@ -1,20 +1,23 @@
 from django.shortcuts import render,redirect
 from product.models import Product
-from userside.models import Contact
+from .models import Contact
+from django.contrib.auth.decorators import login_required
 
 
 
-
+@login_required
 def about(request):
     return render (request,'about.html')
 
+
+@login_required
 def PRODUCT(request):
     products_list=Product.objects.all()
     context = {'page_obj': products_list}
     print(context)
     return render(request,'products.html',context)
 
-
+@login_required
 def submit_contact(request):
     if request.method=="POST":
         name=request.POST.get('name')
