@@ -3,6 +3,11 @@ from product.models import *
 from django.contrib.auth.decorators import login_required
 
 
+
+
+
+
+
 @login_required
 def index(request):
     product_objects=Product.objects.all()
