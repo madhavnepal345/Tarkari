@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import about,PRODUCT,submit_contact
+from .views import about,PRODUCT,submit_contact,cart
 from django.shortcuts import render
 
 urlpatterns = [
@@ -8,5 +8,6 @@ urlpatterns = [
     path('product/',PRODUCT, name='productfrontend'),
     path('contact/',submit_contact,name='contact'),
     path('thank-you/',lambda request: render(request,'thank_you.html'),name="thank_you"),
+    path('cart/',cart,name='cart'),
 ]
 

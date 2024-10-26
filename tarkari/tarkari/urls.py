@@ -24,7 +24,7 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index, name='home'),
-    path('my-view/', MyView.as_view()),
+    
     path('about/',include('userside.urls')),
     # path('products/',include('product.urls')),
     path('admin_side/',include('myadmin.urls')),

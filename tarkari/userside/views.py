@@ -39,3 +39,7 @@ def submit_contact(request):
         return redirect('thank_you')
 
     return render(request,'contact.html')
+
+
+def cart(request):
+    return render(request,'cart.html')
