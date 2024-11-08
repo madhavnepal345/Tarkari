@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Bootstap 5 Responsive Admin Dashboard</title>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom" id="logo"><img src="logo.jpg" alt="logp" srcset="">
+                    </div>
+            <div class="list-group list-group-flush my-3">
+                <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                        class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-chart-line me-2"></i>Product</a>
+                  <a href="add-product.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                            class="fas fa-chart-line me-2"></i> Add Product</a>
+                <a href="order.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-paperclip me-2"></i>Orders</a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+                        class="fas fa-power-off me-2"></i>Logout</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+    <!-- /#page-content-wrapper -->
+    <!-- Product Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-0 gx-5 align-items-end">
+                <div class="col-lg-6">
+                    <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                        <h1 class="display-5 mb-3">Our Products</h1>
+                        <p>Enjoy a diverse range of vegetables, with our offerings changing to reflect the best of each season's harvest.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
+                        <li class="nav-item me-2">
+                            <a class="btn btn-outline-primary border-2 active" data-bs-toggle="pill" href="#tab-1">Vegetable</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-2">Fruits </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <div class="row g-4">
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
+                
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Potato</a>
+                                    <span class="text-primary me-1">Rs.60</span>
+                                
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/cauli.jpeg" alt="">
+                                    
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Cauli</a>
+                                    <span class="text-primary me-1">Rs.80</span>
+                                    
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-6.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-8.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                            <a class="btn btn-primary rounded-pill py-3 px-5" href="">Browse More Products</a>
+                        </div> -->
+                    </div>
+                </div>
+                <div id="tab-2" class="tab-pane fade show p-0">
+                    <div class="row g-4">
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-1.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-6.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-8.jpg" alt="">
+
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <span class="text-primary me-1">$19.00</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="fa fa-shopping-bag text-primary me-2"></i>Update</a>
+                                    </small>
+                                    <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-shopping-bag text-primary me-2"></i>Delete</a>
+                                    </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product End -->
+
+    <!-- update Modal form -->
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel">Update Product</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="productName" class="form-label">Product Name</label>
+                            <input type="text" class="form-control" id="productName" placeholder="Enter product name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Product Image</label>
+                            <input class="form-control" type="file" id="formFile">
+                          </div>
+                        <div class="mb-3">
+                            <label for="productPrice" class="form-label">Product Price</label>
+                            <input type="number" class="form-control" id="productPrice" placeholder="Enter product price">
+                        </div>
+                        <div class="mb-3">
+                            <label for="productCategory" class="form-label">Product Category</label>
+                            <select class="form-select" id="productCategory">
+                                <option selected>Select category</option>
+                                <option value="1">Vegetables</option>
+                                <option value="2">Fruits</option>
+                                
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-custom">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Update model form ends -->
+
+    <!-- Delete popup start -->
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Delete</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want it delete it ?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Delete popup ends -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
+    </script>
+</body>
+
+</html>

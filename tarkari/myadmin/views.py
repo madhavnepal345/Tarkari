@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def Admindashboard(request):
-    return render(request, 'admin/index.html')
+def dashboard(request):
+    return render(request, 'adminside/index.html')
