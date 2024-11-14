@@ -7,25 +7,28 @@
                     <h5 class="modal-title">Add Product</h5>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form method="POST">
+                        {% csrf_token %}
                         <div class="mb-3">
                             <label for="productName" class="form-label">Product Name</label>
-                            <input type="text" class="form-control" id="productName" placeholder="Enter product name">
+                            <input type="text" class="form-control" id="productName" placeholder="Enter product name" required>
                         </div>
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Product Image</label>
-                            <input class="form-control" type="file" id="formFile">
+                            <input class="form-control" type="file" id="formFile" required>
                           </div>
                         <div class="mb-3">
                             <label for="productPrice" class="form-label">Product Price</label>
-                            <input type="number" class="form-control" id="productPrice" placeholder="Enter product price">
+                            <input type="number" class="form-control" id="productPrice" placeholder="Enter product price" required>
                         </div>
                         <div class="mb-3">
                             <label for="productCategory" class="form-label">Product Category</label>
-                            <select class="form-select" id="productCategory">
-                                <option selected>Select category</option>
-                                <option value="1">Vegetables</option>
-                                <option value="2">Fruits</option>
+                            <select class="form-select" id="productCategory"name="category" required>
+                                {% for key, label in categories %}
+                                <option value ="{{ key }}">{{ label }}</option>
+
+                                {% endfor %}
+                                
                                 
                             </select>
                         </div>
